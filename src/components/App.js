@@ -12,7 +12,7 @@ class App extends Component {
       params: { q: term },
     });
 
-    this.setState({ videos: response.data.items });
+    this.setState({ videos: response.data.items, selectedVideo: null });
   };
 
   onVideoSelect = (video) => {
