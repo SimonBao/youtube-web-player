@@ -15,14 +15,19 @@ class SearchBar extends Component {
   };
 
   render() {
+    console.log(this.props.darkMode)
     return (
-      <div className="search-bar ui segment">
+      <div
+        className="search-bar ui segment"
+      >
         <div className="logo">
           <h3>ThouTube</h3>
         </div>
         <form className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
-            <div class="ui action input">
+            <div
+              class="ui action input"
+            >
               <input
                 type="text"
                 value={this.state.term}
@@ -35,6 +40,10 @@ class SearchBar extends Component {
             </div>
           </div>
         </form>
+        <div class="ui toggle checkbox" >
+          <input type="checkbox" name="public" onClick={this.props.toggleDisplayMode}/>
+          <label className="coloring black"></label>
+        </div>{" "}
       </div>
     );
   }

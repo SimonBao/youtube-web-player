@@ -2,6 +2,15 @@
   padding: 0.5em 1em;
 }
 
+.ui.action.darkmode input {
+  background-color: #121212;
+  transition: background-color 0.5s ease
+}
+.search-bar.ui.segment.darkmode {
+  background-color: #212121;
+  transition: background-color 0.5s ease
+} 
+
 .search-bar {
   display: flex;
   flex-direction: row;
@@ -20,6 +29,24 @@
   display: flex;
   margin-left: 2%;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
+.ui.toggle.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.ui.toggle.checkbox input:focus:checked ~ .box:before,
+.ui.toggle.checkbox input:focus:checked ~ .coloring.black:before,
+.ui.toggle.checkbox input:checked ~ .box:before,
+.ui.toggle.checkbox input:checked ~ .coloring.black:before {
+  background: #ffffff !important;
+}
+
+.ui.toggle.checkbox input:focus:checked ~ .coloring.white:before,
+.ui.toggle.checkbox input:checked ~ .coloring.white:before {
+  background: #000000 !important;
+}

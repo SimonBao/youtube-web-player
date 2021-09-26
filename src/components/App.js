@@ -9,7 +9,7 @@ import VideoItem from "./VideoItem";
 dotenv.config();
 
 class App extends Component {
-  state = { videos: [], selectedVideo: null };
+  state = { videos: [], selectedVideo: null, displayModeChange: true };
 
   componentDidMount() {
     this.onTermSubmit("radiohead");
@@ -24,6 +24,19 @@ class App extends Component {
       videos: response.data.items,
       selectedVideo: null,
     });
+  };
+
+  toggleDisplayMode = () => {
+    if (this.state.displayModeChange) {
+      document.querySelector("#root").classList.add("darkmode");
+      document.querySelector(".search-bar").classList.add("darkmode");
+      document.querySelector(".ui.action.input").classList.add("darkmode");
+    } else {
+      document.querySelector("#root").classList.remove("darkmode");
+      document.querySelector(".search-bar").classList.remove("darkmode");
+      document.querySelector(".ui.action.input").classList.remove("darkmode");
+    }
+    this.setState({ displayModeChange: !this.state.displayModeChange });
   };
 
   onVideoSelect = (video) => {
@@ -46,7 +59,10 @@ class App extends Component {
     };
     return (
       <div>
-        <SearchBar onTermSubmit={this.onTermSubmit} />
+        <SearchBar
+          onTermSubmit={this.onTermSubmit}
+          toggleDisplayMode={this.toggleDisplayMode}
+        />
         <div className="ui container">
           <div className="ui grid">
             <div className="ui row">
