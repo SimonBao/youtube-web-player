@@ -12,7 +12,7 @@ class App extends Component {
   state = { videos: [], selectedVideo: null };
 
   componentDidMount() {
-    this.onTermSubmit("vim");
+    this.onTermSubmit("radiohead");
   }
 
   onTermSubmit = async (term) => {
