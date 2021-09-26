@@ -1,0 +1,22 @@
+.ui.grid {
+  height: 80vh;
+}
+
+.ui.row {
+  height: 100%;
+}
+
+.related_videos__container {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.related_videos__container::-webkit-scrollbar {
+  display: none;
+}
+
+.related_videos__container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+

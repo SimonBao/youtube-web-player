@@ -1,0 +1,25 @@
+.search-bar.ui.segment {
+  padding: 0.5em 1em;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.ui.form {
+  width: 60%;
+  margin-left: 10%;
+}
+
+.field {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  margin-left: 2%;
+  justify-content: center;
+  align-items:center;
+}
+
