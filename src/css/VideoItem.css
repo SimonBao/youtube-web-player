@@ -7,3 +7,11 @@
 .video-item.item img {
   max-width: 180px;
 }
+
+.header {
+  color: inherit;
+}
+
+.ui.header ~ p {
+  color: #000;
+}
